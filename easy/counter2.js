@@ -36,23 +36,24 @@ Without using setInterval, try to code a counter in Javascript. There is a hint 
 // }
 
 // setTimeout(()=>{
-//   yoo()
-// },0);
-
-// console.log(2);
-
-import { error } from "node:console";
-import fs, { readFile } from "node:fs"
-
-
-fs.readFile("./A.txt",'utf8',(err,data)=>{
-   if(err){
-    console.log(err)
+  //   yoo()
+  // },0);
+  
+  // console.log(2);
+  
+  import { error } from "node:console";
+  import fs, { readFile } from "node:fs"
+  
+  console.log("Done1")
+  
+  fs.readFile("./A.txt",'utf8',(err,data)=>{
+       if(err){
+          console.log(err)
     return
    }
 
   //  const hasWhitespace = /\s/.test(data);
-   
+
   //  Only remove whiteSpaces : data.trim();
   //  Replace white Spaces with " " one white space 
    const ans  = data.replace(/\s+/g,' ').trim();
@@ -60,11 +61,22 @@ fs.readFile("./A.txt",'utf8',(err,data)=>{
 
   //  How you write a file : 
   // (./filename.txt,data you want to write, Format)
-   fs.writeFileSync("./example.txt",ans,'utf-8')
-   
+  fs.writeFileSync("./example.txt","Hello maa",'utf-8')
 
-   console.log(ans)
+
+  console.log(ans)
 })
+console.log("Done2")
+
+
+/*
+Output:
+
+Done1
+Done2
+Hi I am Supratick
+
+*/
 
 /*
 
